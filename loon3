@@ -70,44 +70,27 @@ helinm = https://getinfo.bigwatermelon.org/api/v1/client/subscribe?token=87b9586
 ikuuu = https://o05j1.no-mad-world.club/link/ekb4pXcO2ee3jkKe?sub=3&extend=1,udp=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=true
 
 [Remote Filter]
-全球节点 = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
-日本节点 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-韩国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-新国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-英国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇬🇧|英国|(\b(UK|GBR)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-美国节点 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+日本 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+韩国 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+英国 = NameRegex, FilterKey = "^(?=.*((?i)🇬🇧|英国|(\b(UK|GBR)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+其他 = NameRegex, FilterKey = "^(?=.*(.*))(?!.*((?i)🇬🇧|🇯🇵|🇰🇷|🇸🇬|🇺🇸|英国|日本|川日|东京|大阪|泉日|埼玉|韩国|韓|首尔|新加坡|狮|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(UK|GBR|JP|JPN|Japan|KR|KOR|Korea|SG|SGP|Singapore|US|USA|United States|America|GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
 [Proxy Group]
-# 手动选择地区策略
-日本策略 = select, 日本时延优选, 日本故障转移, 日本负载均衡, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国策略 = select, 韩国时延优选, 韩国故障转移, 韩国负载均衡, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国策略 = select, 新国时延优选, 新国故障转移, 新国负载均衡, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-英国策略 = select, 英国时延优选, 英国故障转移, 英国负载均衡, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-美国策略 = select, 美国时延优选, 美国故障转移, 美国负载均衡, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-# --------------------------------
-# 自动
-# 时延优选
-日本时延优选 = url-test, 日本节点, interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国时延优选 = url-test, 韩国节点, interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国时延优选 = url-test, 新国节点, interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-英国时延优选 = url-test, 英国节点, interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-美国时延优选 = url-test, 美国节点, interval = 600, tolerance = 50, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+# 手动选择
+手动选择 = select,负载均衡,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
 # 故障转移
-日本故障转移 = fallback, 日本节点, interval = 600, max-timeout = 2000, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国故障转移 = fallback, 韩国节点, interval = 600, max-timeout = 2000, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国故障转移 = fallback, 新国节点, interval = 600, max-timeout = 2000, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-英国故障转移 = fallback, 英国节点, interval = 600, max-timeout = 2000, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-美国故障转移 = fallback, 美国节点, interval = 600, max-timeout = 2000, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+故障转移 = fallback,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,interval = 900,max-timeout = 2000,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FallBack.png
 # 负载均衡
-日本负载均衡 = load-balance, 日本节点, interval = 600, max-timeout = 2000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
-韩国负载均衡 = load-balance, 韩国节点, interval = 600, max-timeout = 2000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
-新国负载均衡 = load-balance, 新国节点, interval = 600, max-timeout = 2000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
-英国负载均衡 = load-balance, 英国节点, interval = 600, max-timeout = 2000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
-美国负载均衡 = load-balance, 美国节点, interval = 600, max-timeout = 2000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
-# --------------------------------
-# 兜底策略故障转移
-兜底切换 = fallback, 日本策略, 韩国策略, 新国策略, 英国策略, 美国策略, interval = 600, max-timeout = 2000, img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
-
+负载均衡 = load-balance,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,interval = 900,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png
+# 时延优选
+日本 = url-test,日本,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/Japan.png
+韩国 = url-test,韩国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/SouthKorea.png
+新加坡 = url-test,新加坡,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/Singapore.png
+英国 = url-test,英国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
+美国 = url-test,美国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/UnitedStates.png
+其他 = select,其他,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/UnitedNations.png
 
 [Proxy Chain]
 
@@ -118,7 +101,7 @@ IP-CIDR, 198.18.0.1/16, DIRECT
 IP-CIDR, 198.18.0.0/15, DIRECT
 IP-CIDR6, fc00::/18, DIRECT
 DOMAIN,is.snssdk.com,DIRECT
-FINAL,兜底切换
+FINAL,故障转移
 # Local Rule
 # Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR,IP-CIDR6,IP-ASN
 # Strategy:DIRECT,Proxy,REJECT
@@ -140,7 +123,7 @@ https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Apple.list, policy=DI
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=微信, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list, policy=DIRECT, tag=抖音, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Navidrome.list, policy=DIRECT, tag=Navidrome, enabled=true
-# 其他直连
+# 国内直连
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Player-Direct.list, policy=DIRECT, tag=Player-Direct, enabled=true
 https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt, policy=DIRECT, tag=Direct-List, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list, policy=DIRECT, tag=ChinaMax_All, enabled=true
@@ -148,13 +131,14 @@ https://kelee.one/Tool/Loon/Rule/LAN, policy=DIRECT, tag=LAN, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=true
 
 # 国外应用代理
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/AI.list, policy=美国策略, tag=AI, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=日本策略, tag=TikTok, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=兜底切换, tag=X, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=兜底切换, tag=Telegram, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=兜底切换, tag=YouTube, enabled=true
-https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt, policy=兜底切换, tag=Proxy-List, enabled=true
-https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list, policy=兜底切换, tag=Global_Domain, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/AI.list, policy=美国, tag=AI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=日本, tag=TikTok, enabled=true
+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=手动选择, tag=X, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=手动选择, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=手动选择, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt, policy=手动选择, tag=Proxy-List, enabled=true
+https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list, policy=手动选择, tag=Global_Domain, enabled=true
 
 
 [Host]
@@ -171,11 +155,11 @@ https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Gl
 
 
 [Plugin]
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy = 兜底切换, enabled = true
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy = 兜底切换, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin, policy = 兜底切换, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy = 兜底切换, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy = 兜底切换, enabled = true
+https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy = 手动选择, enabled = true
+https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy = 手动选择, enabled = true
+https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin, policy = 手动选择, enabled = true
+https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy = 手动选择, enabled = true
+https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy = 手动选择, enabled = true
 
 https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled = true
 https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled = true
