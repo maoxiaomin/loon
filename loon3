@@ -21,13 +21,13 @@ doh3-server = h3://223.5.5.5/dns-query,h3://223.6.6.6/dns-query
 # DoQ server
 doq-server = quic://223.5.5.5:853,quic://223.6.6.6:853
 # wifi共享开启时http服务的端口
-wifi-access-http-port = 6154
+wifi-access-http-port = 7222
 # wifi共享开启时socks5服务的端口
-wifi-access-socks5-port = 6153
+wifi-access-socks5-port = 7221
 # 是否允许wifi下共享网络
-allow-wifi-access = true
+allow-wifi-access = false
 # 节点测速时的超时秒数
-test-timeout = 2
+test-timeout = 3
 # 网络接口
 interface-mode = auto
 # 域名拦截行为
@@ -69,39 +69,38 @@ free cloud = https://pro.xn--l9qyaz082a.cn/api/v1/client/subscribe?token=072e183
 helinm = https://getinfo.bigwatermelon.org/api/v1/client/subscribe?token=87b9586875305befe2d9fbf1ca5ea426,udp=true,fast-open=default,vmess-aead=true,skip-cert-verify=true,enabled=true,flexible-sni=true
 ikuuu = https://o05j1.no-mad-world.club/link/ekb4pXcO2ee3jkKe?sub=3&extend=1,udp=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=true,flexible-sni=true
 
+
 [Remote Filter]
-日本 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-韩国 = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-新加坡 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-英国 = NameRegex, FilterKey = "^(?=.*((?i)🇬🇧|英国|(\b(UK|GBR)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-美国 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-其他 = NameRegex, FilterKey = "^(?=.*(.*))(?!.*((?i)🇬🇧|🇯🇵|🇰🇷|🇸🇬|🇺🇸|英国|日本|川日|东京|大阪|泉日|埼玉|韩国|韓|首尔|新加坡|狮|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(UK|GBR|JP|JPN|Japan|KR|KOR|Korea|SG|SGP|Singapore|US|USA|United States|America|GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+全球节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+香港节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong|Hong Kong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+台湾节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇹🇼|🇨🇳|台湾|台北|(\b(TW|TWN|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+日本节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|JPN|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+韩国节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|KOR|Korea|Seoul)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+新国节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|新国|狮|(\b(SG|SGP|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+美国节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|USA|United States|America)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+英国节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*((?i)🇬🇧|英国|(\b(UK|GBR)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+其他节点 = NameRegex,aca,aladdin, FilterKey = "^(?=.*(.*))(?!.*((?i)🇭🇰|🇬🇧|🇹🇼|🇯🇵|🇰🇷|🇸🇬|🇺🇸|香港|英国|台湾|日本|川日|东京|大阪|泉日|埼玉|韩国|韓|首尔|新加坡|狮|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|贩卖|通知|倒卖|防止|国内|🎮|(\b(HK|HKG|Hong|Hong Kong|UK|GBR|TW|TWN|Tai|Taiwan|JP|JPN|Japan|KR|KOR|Korea|SG|SGP|Singapore|US|USA|United States|America|GAME|USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
 
 [Proxy Group]
-# 手动选择
-手动选择 = select,负载均衡,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
-# 故障转移
-故障转移 = fallback,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,interval = 900,max-timeout = 2000,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/FallBack.png
-# 负载均衡
-负载均衡 = load-balance,英国,日本,韩国,新加坡,美国,其他,url = http://cp.cloudflare.com/generate_204,interval = 900,max-timeout = 2000,algorithm = pcc,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/LoadBalance.png
-# 时延优选
-日本 = url-test,日本,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/Japan.png
-韩国 = url-test,韩国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/SouthKorea.png
-新加坡 = url-test,新加坡,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/Singapore.png
-英国 = url-test,英国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png
-美国 = url-test,美国,url = http://cp.cloudflare.com/generate_204,interval = 900,tolerance = 50,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/UnitedStates.png
-其他 = select,其他,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Flag/UnitedNations.png
+# 时延优选策略组
+香港时延优选 = url-test,香港节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+台湾时延优选 = url-test,台湾节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+日本时延优选 = url-test,日本节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+韩国时延优选 = url-test,韩国节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+新国时延优选 = url-test,新国节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+美国时延优选 = url-test,美国节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+英国时延优选 = url-test,英国节点,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+# 手动策略组
+全球手动 = select,全球节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+# 兜底策略故障转移
+最优时延 = url-test,香港时延优选,台湾时延优选,日本时延优选,韩国时延优选,新国时延优选,美国时延优选,英国时延优选,url = http://cp.cloudflare.com/generate_204,interval = 300,tolerance = 50,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/fallback.png
 
 [Proxy Chain]
 
 
 [Rule]
-IP-CIDR, 28.0.0.1/8, DIRECT
-IP-CIDR, 198.18.0.1/16, DIRECT
-IP-CIDR, 198.18.0.0/15, DIRECT
-IP-CIDR6, fc00::/18, DIRECT
 DOMAIN,is.snssdk.com,DIRECT
-FINAL,故障转移
+FINAL,最优时延
 # Local Rule
 # Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR,IP-CIDR6,IP-ASN
 # Strategy:DIRECT,Proxy,REJECT
@@ -118,27 +117,29 @@ FINAL,故障转移
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/MyBlockAds.list, policy=REJECT, tag=MyBlockAds, enabled=true
 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/rule/Surge/Adblock4limbo_surge.list, policy=REJECT, tag=Adblock4limbo, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/RejectAd.list, policy=REJECT, tag=RejectAd, enabled=true
-# 应用直连
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Apple.list, policy=DIRECT, tag=苹果, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=微信, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list, policy=DIRECT, tag=抖音, enabled=true
+# 国内软件直连
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Apple.list, policy=DIRECT, tag=Apple, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=WeChat, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list, policy=DIRECT, tag=DouYin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Navidrome.list, policy=DIRECT, tag=Navidrome, enabled=true
-# 国内直连
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Player-Direct.list, policy=DIRECT, tag=Player-Direct, enabled=true
 https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt, policy=DIRECT, tag=Direct-List, enabled=true
+# 国内规则直连
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list, policy=DIRECT, tag=ChinaMax_All, enabled=true
 https://kelee.one/Tool/Loon/Rule/LAN, policy=DIRECT, tag=LAN, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/CN_REGION, policy=DIRECT, tag=CN REGION, enabled=true
 
-# 国外应用代理
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/AI.list, policy=美国, tag=AI, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=日本, tag=TikTok, enabled=true
-
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=手动选择, tag=X, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=手动选择, tag=Telegram, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=手动选择, tag=YouTube, enabled=true
-https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt, policy=手动选择, tag=Proxy-List, enabled=true
-https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list, policy=手动选择, tag=Global_Domain, enabled=true
+# 国外软件代理
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/Player-Proxy.list, policy=最优时延, tag=Player-Proxy, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Rule/AI.list, policy=美国时延优选, tag=AI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list, policy=最优时延, tag=GitHub, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bing/Bing.list, policy=最优时延, tag=Bing, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list, policy=最优时延, tag=Google, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=最优时延, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=最优时延, tag=TikTok, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=最优时延, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt, policy=最优时延, tag=Proxy-List, enabled=true
+https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list, policy=最优时延, tag=Global_Domain, enabled=true
 
 
 [Host]
@@ -155,19 +156,10 @@ https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Gl
 
 
 [Plugin]
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy = 手动选择, enabled = true
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy = 手动选择, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin, policy = 手动选择, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy = 手动选择, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy = 手动选择, enabled = true
-
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/TestFlightRegionUnlock.plugin, policy = DIRECT, enabled = true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlightBeta.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=最优时延, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Redirect.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeTools.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin, enabled=true
@@ -176,12 +168,11 @@ https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WebPage.plugin, ena
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AppRaven.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/RevenueCat.plugin, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iTunes.plugin, enabled=false
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AppleWeather.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ColorfulCloudsWeatherPro.plugin, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ChinaMobile.plugin, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ChinaMobile.plugin, enabled=false
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/QQ.plugin, tag=QQ, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin, policy=最优时延, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/RedPaper.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo.plugin, enabled=true
@@ -223,6 +214,10 @@ https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin, enabl
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MyBlockAds.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AdsBlocker.plugin, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/LoonGallery.plugin, policy=最优时延, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin, policy=最优时延, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin, policy=最优时延, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BoxJs.plugin, policy=最优时延, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/1.1.1.1.plugin, enabled=true
 
 [MitM]
